@@ -11,7 +11,7 @@ rawbarize(Config, _App) ->
                                 {App, O} when is_list(O) -> O;
                                 _ -> []
                               end,
-                    io:format("== rawbarize : ~p~n", [App]),
+                    io:format("=== rawbarize : ~p~n", [App]),
                     Dest = filename:join([BaseDir, priv, App]),
                     filelib:ensure_dir(filename:join([Dest, "."])),
                     recursive_copy(Path, Dest, Options)
